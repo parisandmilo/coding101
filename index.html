@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to Coding &amp; Cookies</title>
+  </head>
+  <body>
+    <!-- Headings -->
+    <div class="text-center">
+      <h1>Top Level Heading</h1>
+      <h2>Secondary Heading</h2>
+      <h3>This is the third level.</h3>
+      <h6>Lowest Level of Headings, there are 6 in total.</h6>
+    </div>
+    <div>
+      <ul>
+        <li>The higher numbers are more important</li>
+        <li>It’s usual to only have one <code>h1</code> on a page, and you rarely see anything below <code>h4</code> in real pages</li>
+      </ul>
+      <p>
+        <strong>Pro-tip</strong>: Headings also tell search engines what the most important text to look for in a page are (i.e. they are important for SEO, and you can use CSS to change their styling.)
+      </p>
+    </div>
+
+    <hr> <!-- this is a line break, you can do this with CSS too. -->
+
+    <div>
+      <h2>Paragraphs &amp; Content Elements</h2>
+      <p>
+        I'm a paragraph. Some of my text is <em>in italics, providing emphasis</em>, and some of it is <strong>bold</strong>. Can you find the comment?
+      </p>
+      <p>
+        The <code>em</code> tag is used to provide emphasis. In reality that means italics - in fact the tag <code>i</code> also works. Using em is better though as it fits with the idea of semantic markup - marking your information as to its meaning, instead of how you want it to look.
+        <br>
+        The <code>strong</code> tag is used to make text stand out. It basically means bold - <code>b</code> also works, but <code>strong</code> is better - see above.
+      </p>
+
+      <!-- I don't want to be seen. I am a comment. You can still see me in page sources! -->
+
+      <div>
+        <h3>Lists</h3>
+        <p>
+          Lists have a nested structure, HTML provides unordered and ordered lists.
+          In both types of lists you add items using a <code>li</code> tag. This stands for list item.
+        </p>
+      </div>
+      <div>
+        <div class="col-md-6 col-sm-6 col-xs-6 list">
+          <ul>
+            <li>I am an unordered list item, using <strong>bullet points</strong>.</li>
+            <li>"ul" = unordered list</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-6 list">
+          <ol>
+            <li>this is an ordered list, using <strong>automatic numbering</strong>.</li>
+            <li>"ol" = ordered list</li>
+
+          </ol>
+        </div>
+      </div>
+
+      <h3>Links</h3>
+      <div>
+        <p>
+          <a href="http://www.facebook.com">this is a link to facebook</a>
+          <ul>
+            <li>The <code>href</code> property tells you where the link will point</li>
+            <li>You can specify this link in different ways:</li>
+            <ul>
+              <li>absolute external link e.g. <code>http://www.facebook.com</code></li>
+              <li>absolute local link e.g. <code>/about</code>. This links to a file relative to the root of your webserver. For example if your site is at <code>www.example.com</code> the link will point to <code>www.example.com/about</code></li>
+              <li>relative local link e.g. “about”. This links to a file relative to the current html document. In this case it will link to the file called <code>about</code> in the same folder as your current html file.</li>
+            </ul>
+            <li>You can also link to places in the same document using <code>href="#my_tag"</code>. More on this later.</li>
+            <li>You can get the link to open in a new tab by adding a <code>target="_blank"</code> attribute.
+              <!-- like this: <a href="http://www.facebook.com" target="_blank"> -->
+        </ul>
+        </p>
+      </div>
+
+      <h3>Images</h3>
+
+      <img alt="this text is what is shown on a broken link tag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Example.svg/2000px-Example.svg.png">
+
+      <ul>
+        <li>The <code>alt</code> tag is for providing a description of your image. This is useful for partially sighted people using screen readers, or in case the image doesn’t load.</li>
+        <li>The file can be linked to in the same way as <code>href</code>. In the example above we use a relative local link to a file called <code>my_cat.png</code> in the same folder as the html file.</li>
+    </ul>
+
+      <h3>Table</h3>
+      <table>
+          <thead>
+              <tr>
+                  <th>Column 1 Heading</th>
+                  <th>Column 2 Heading</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Row 1, Column 1</td>
+                  <td>Row 1, Column 2</td>
+              </tr>
+              <tr>
+                  <td>Row 2, Column 1</td>
+                  <td>Row 2, Column 2</td>
+              </tr>
+              <tr>
+                  <td>Row 3, Column 1</td>
+                  <td>Row 3, Column 2</td>
+              </tr>
+          </tbody>
+      </table>
+
+      <h3>Embedding other documents e.g. GIFs</h3>
+        <iframe src="//giphy.com/embed/l41YviqYRTHmKecVi" width="480" height="343" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/michaelbruno-music-video-justin-timberlake-cantstopthefeeling-l41YviqYRTHmKecVi">via GIPHY</a></p>
+
+        <p>The <code>iframe</code> tag is used to embed other documents in your HTML</p>
+    </div>
+  </body>
+</html>
