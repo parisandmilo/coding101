@@ -64,12 +64,12 @@
       <h3>Links</h3>
       <div>
         <p>
-          <a href="http://www.facebook.com">this is a link to facebook</a>
+          <a href="https://www.facebook.com">this is a link to facebook</a>
           <ul>
             <li>The <code>href</code> property tells you where the link will point</li>
             <li>You can specify this link in different ways:</li>
             <ul>
-              <li>absolute external link e.g. <code>http://www.facebook.com</code></li>
+              <li>absolute external link e.g. <code>https://www.facebook.com</code></li>
               <li>absolute local link e.g. <code>/about</code>. This links to a file relative to the root of your webserver. For example if your site is at <code>www.example.com</code> the link will point to <code>www.example.com/about</code></li>
               <li>relative local link e.g. “about”. This links to a file relative to the current html document. In this case it will link to the file called <code>about</code> in the same folder as your current html file.</li>
             </ul>
@@ -114,9 +114,29 @@
       </table>
 
       <h3>Embedding other documents e.g. GIFs</h3>
-        <iframe src="//giphy.com/embed/l41YviqYRTHmKecVi" width="480" height="343" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/michaelbruno-music-video-justin-timberlake-cantstopthefeeling-l41YviqYRTHmKecVi">via GIPHY</a></p>
-
+        <iframe src="https://giphy.com/embed/l41YviqYRTHmKecVi" width="480" height="343" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/michaelbruno-music-video-justin-timberlake-cantstopthefeeling-l41YviqYRTHmKecVi">via GIPHY</a></p>
         <p>The <code>iframe</code> tag is used to embed other documents in your HTML</p>
+        <iframe src="https://giphy.com/embed/3o6Mb8gKNhqA59Fy3m" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/usopenseries-tennis-us-open-usta-3o6Mb8gKNhqA59Fy3m">via GIPHY</a></p>
+
+
+        <div id="demo">
+          <h1>How do dynamic websites retrieve data from a server?</h1>
+          <button type="button" onclick="loadDoc()">Change Content</button>
+          </div>
+
+          <script>
+          function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML =
+                this.responseText;
+              }
+            };
+            xhttp.open("GET", "http://www.w3schools.com/xml/ajax_info.txt", true);
+            xhttp.send();
+          }
+          </script>
     </div>
   </body>
 </html>
