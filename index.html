@@ -6,8 +6,32 @@
     <link rel="stylesheet" href="css/master.css" media="screen" title="no title">
   </head>
   <body>
+    <!-- TASKS set 1
+    - Make the first level heading red, the 2nd level heading blue
+    - Give each item in the list a yellow background, not the whole list though!
+    - Make all paragraph text green, Helvetica and size 16px
+    - Remove the decorators from the list
+    -->
+
+    <!-- Tasks Set 2 using your knowledge of attribute selectors
+    - Give the paragraph div a 3px solid border and a light blue (#6495ED) background
+    - Give the last item in each list a class and make them bold
+    - Remove the underline from each link
+    - Use
+    - Resize the image to width 50%
+    -->
+
+    <ul class='nav'>
+     <li><a href="#headings">Heading</a></li>
+     <li><a href="#paras">Paragraphs &amp; Content Elements</a></li>
+     <li><a href="#lists">Lists</a></li>
+     <li><a href="#links">Links</a></li>
+     <li><a href="#images">Images</a></li>
+   </ul>
+
+
     <!-- Headings -->
-    <div class="text-center">
+    <div class="text-center" id="headings">
       <h1>Top Level Heading</h1>
       <h2>Secondary Heading</h2>
       <h3>This is the third level.</h3>
@@ -25,7 +49,7 @@
 
     <hr> <!-- this is a line break, you can do this with CSS too. -->
 
-    <div>
+    <div id="paras">
       <h2>Paragraphs &amp; Content Elements</h2>
       <p>
         I'm a paragraph. Some of my text is <em>in italics, providing emphasis</em>, and some of it is <strong>bold</strong>. Can you find the comment?
@@ -35,10 +59,11 @@
         <br>
         The <code>strong</code> tag is used to make text stand out. It basically means bold - <code>b</code> also works, but <code>strong</code> is better - see above.
       </p>
+    </div>
 
       <!-- I don't want to be seen. I am a comment. You can still see me in page sources! -->
 
-      <div>
+      <div id="lists">
         <h3>Lists</h3>
         <p>
           Lists have a nested structure, HTML provides unordered and ordered lists.
@@ -57,13 +82,12 @@
           <ol>
             <li>this is an ordered list, using <strong>automatic numbering</strong>.</li>
             <li>"ol" = ordered list</li>
-
           </ol>
         </div>
       </div>
 
-      <h3>Links</h3>
-      <div>
+      <div id="links">
+        <h3>Links</h3>
         <p>
           <a href="https://www.facebook.com">this is a link to facebook</a>
           <ul>
@@ -81,64 +105,68 @@
         </p>
       </div>
 
-      <h3>Images</h3>
+      <div id="images">
+        <h3>Images</h3>
 
-      <img alt="this text is what is shown on a broken link tag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Example.svg/2000px-Example.svg.png">
+        <img alt="this text is what is shown on a broken link tag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Example.svg/2000px-Example.svg.png">
 
-      <ul>
-        <li>The <code>alt</code> tag is for providing a description of your image. This is useful for partially sighted people using screen readers, or in case the image doesn’t load.</li>
-        <li>The file can be linked to in the same way as <code>href</code>. In the example above we use a relative local link to a file called <code>my_cat.png</code> in the same folder as the html file.</li>
-    </ul>
+        <ul>
+          <li>The <code>alt</code> tag is for providing a description of your image. This is useful for partially sighted people using screen readers, or in case the image doesn’t load.</li>
+          <li>The file can be linked to in the same way as <code>href</code>. In the example above we use a relative local link to a file called <code>my_cat.png</code> in the same folder as the html file.</li>
+        </ul>
+      </div>
 
-      <h3>Table</h3>
-      <table>
-          <thead>
-              <tr>
-                  <th>Column 1 Heading</th>
-                  <th>Column 2 Heading</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>Row 1, Column 1</td>
-                  <td>Row 1, Column 2</td>
-              </tr>
-              <tr>
-                  <td>Row 2, Column 1</td>
-                  <td>Row 2, Column 2</td>
-              </tr>
-              <tr>
-                  <td>Row 3, Column 1</td>
-                  <td>Row 3, Column 2</td>
-              </tr>
-          </tbody>
-      </table>
+      <div>
+        <h3>Tables</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Column 1 Heading</th>
+                    <th>Column 2 Heading</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Row 1, Column 1</td>
+                    <td>Row 1, Column 2</td>
+                </tr>
+                <tr>
+                    <td>Row 2, Column 1</td>
+                    <td>Row 2, Column 2</td>
+                </tr>
+                <tr>
+                    <td>Row 3, Column 1</td>
+                    <td>Row 3, Column 2</td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
 
-      <h3>Embedding other documents e.g. GIFs</h3>
-        <iframe src="https://giphy.com/embed/l41YviqYRTHmKecVi" width="480" height="343" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/michaelbruno-music-video-justin-timberlake-cantstopthefeeling-l41YviqYRTHmKecVi">via GIPHY</a></p>
-        <p>The <code>iframe</code> tag is used to embed other documents in your HTML</p>
-        <iframe src="https://giphy.com/embed/3o6Mb8gKNhqA59Fy3m" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/usopenseries-tennis-us-open-usta-3o6Mb8gKNhqA59Fy3m">via GIPHY</a></p>
+      <div>
+        <h3>Embedding other documents e.g. GIFs</h3>
+          <iframe src="https://giphy.com/embed/l41YviqYRTHmKecVi" width="480" height="343" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/michaelbruno-music-video-justin-timberlake-cantstopthefeeling-l41YviqYRTHmKecVi">via GIPHY</a></p>
+          <p>The <code>iframe</code> tag is used to embed other documents in your HTML</p>
+          <iframe src="https://giphy.com/embed/3o6Mb8gKNhqA59Fy3m" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/usopenseries-tennis-us-open-usta-3o6Mb8gKNhqA59Fy3m">via GIPHY</a></p>
+      </div>
 
+      <div id="demo">
+        <h1>How do dynamic websites retrieve data from a server?</h1>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+      </div>
 
-        <div id="demo">
-          <h1>How do dynamic websites retrieve data from a server?</h1>
-          <button type="button" onclick="loadDoc()">Change Content</button>
-          </div>
-
-          <script>
-          function loadDoc() {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-              if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("demo").innerHTML =
-                this.responseText;
-              }
-            };
-            xhttp.open("GET", "http://www.w3schools.com/xml/ajax_info.txt", true);
-            xhttp.send();
+      <script>
+      function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("demo").innerHTML =
+            this.responseText;
           }
-          </script>
-    </div>
+        };
+        xhttp.open("GET", "http://www.w3schools.com/xml/ajax_info.txt", true);
+        xhttp.send();
+      }
+      </script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
